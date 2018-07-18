@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>使用者註冊</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  
+      <link rel="stylesheet" href="css/register.css">
+
+  
+</head>
+
+<body>
+  <!-- multistep form -->
+<form id="msform"  >
+  <!-- progressbar -->
+  <ul id="progressbar">
+   
+    <li class="active">問題一</li>
+    <li>問題二</li>
+    <li>問題三</li>
+    <li>問題四</li>
+    <li>問題五</li>
+    <li>問題六</li>
+    <li>問題七</li>
+    <li>聯絡資訊</li>
+   
+  </ul>
+  <!-- fieldsets -->
+  
+ 
+ 
+  <fieldset>
+      <h2 class="fs-title">風險評估問卷 P.1</h2>
+      <h1 class="fs-subtitle"><font color="red" size="5">客戶年齡層</font></h1>
+      <h3 style = "text-align : left;" >
+          <input type="radio" style="width:20px;height:20px;text-algin:center;" name="a[]" value="1" ><font size="4"> 75歲以上/20歲以下</font><br>
+      <input type="radio" style="width:20px;height:20px;text-algin:left;" name="a[]" value="2" ><font size="4"  align = "left"> 66至75歲</font><br>
+      <input type="radio" style="width:20px;height:20px;text-algin:left;" name="a[]" value="3" ><font size="4"  align = "left"> 56至65歲</font><br>
+      <input type="radio" style="width:20px;height:20px;text-algin:left;" name="a[]" value="4" ><font size="4"  align = "left"> 46至55歲</font><br>
+    <input type="radio" style="width:20px;height:20px;text-algin:left;" name="a[]" value="5" ><font size="4"  align = "left"> 20至45歲</font><br>
+      </h3>
+      
+  <input type="button" name="next" class="next action-button" value="下一步" />
+  
+  </fieldset>
+  
+  
+  <fieldset>
+      <h2 class="fs-title">風險評估問卷 P.2</h2>
+      <h1 class="fs-subtitle"><font color="red" size="5">投資經驗（包含投資股票、基金、外幣、黃金、期貨……等產品</font></h1>
+      <h3 style = "text-align : left;" >
+          <input type="radio" style="width:20px;height:20px;text-algin:left;" name="b[]" value="1" ><font size="4"> 無投資經驗或新手</font><br>
+          <input type="radio" style="width:20px;height:20px;text-algin:left;" name="b[]" value="2" ><font size="4"  align = "left"> 1年以下</font><br>
+              <input type="radio" style="width:20px;height:20px;text-algin:left;" name="b[]" value="3" ><font size="4"  align = "left"> 1~3年</font><br>
+                  <input type="radio" style="width:20px;height:20px;text-algin:left;" name="b[]" value="4" ><font size="4"  align = "left"> 3~5年</font><br>
+                       <input type="radio" style="width:20px;height:20px;text-algin:left;" name="b[]" value="5" ><font size="4"  align = "left"> 5 年以上</font><br>
+                      
+                          </h3>
+      
+      <input type="button" name="previous" class="previous action-button" value="前一步" />
+      <input type="button" name="next" class="next action-button" value="下一步" />
+      
+  </fieldset>
+  
+  
+  <fieldset>
+      <h2 class="fs-title">風險評估問卷 P.3</h2>
+      <h1 class="fs-subtitle"><font color="red" size="5">個人/家庭月收入或公司收入中有多少比例可用於投資或儲蓄</font></h1>
+      <h3 style = "text-align : left;" >
+          <input type="radio" style="width:20px;height:20px;text-algin:center;" name="c[]" value="1" ><font size="4"> 5% 以下</font><br>
+          <input type="radio" style="width:20px;height:20px;text-algin:left;" name="c[]" value="2" ><font size="4"  align = "left"> 5%~10%</font><br>
+              <input type="radio" style="width:20px;height:20px;text-algin:left;" name="c[]" value="3" ><font size="4"  align = "left"> 10%~20%</font><br>
+                  <input type="radio" style="width:20px;height:20px;text-algin:left;" name="c[]" value="4" ><font size="4"  align = "left"> 20%~30%</font><br>
+                      <input type="radio" style="width:20px;height:20px;text-algin:left;" name="c[]" value="5" ><font size="4"  align = "left"> 30% 以上</font><br>
+                      
+                      </h3>
+      
+      <input type="button" name="previous" class="previous action-button" value="前一步" />
+      <input type="button" name="next" class="next action-button" value="下一步" />
+      
+  </fieldset>
+  
+  
+  <fieldset>
+      <h2 class="fs-title">風險評估問卷 P.4</h2>
+      <h1 class="fs-subtitle"><font color="red" size="5">您習慣的基金投資方式</font></h1>
+      <h3 style = "text-align : left;" >
+          <input type="radio" style="width:20px;height:20px;text-algin:center;" name="d[]" value="1" ><font size="4"> 不曾投資過</font><br>
+          <input type="radio" style="width:20px;height:20px;text-algin:left;" name="d[]" value="2" ><font size="4"  align = "left"> 只買過貨幣型基金</font><br>
+              <input type="radio" style="width:20px;height:20px;text-algin:left;" name="d[]" value="3" ><font size="4"  align = "left"> 定時定額</font><br>
+                  <input type="radio" style="width:20px;height:20px;text-algin:left;" name="d[]" value="4" ><font size="4"  align = "left"> 定時定額和單筆二者皆有</font><br>
+                  <input type="radio" style="width:20px;height:20px;text-algin:left;" name="d[]" value="5" ><font size="4"  align = "left"> 單筆</font><br>
+                      
+                      </h3>
+      
+      <input type="button" name="previous" class="previous action-button" value="前一步" />
+      <input type="button" name="next" class="next action-button" value="下一步" />
+      
+  </fieldset>
+  
+  
+  <fieldset>
+      <h2 class="fs-title">風險評估問卷 P.5</h2>
+      <h1 class="fs-subtitle"><font color="red" size="5">可承受投資風險之程度
+          資產的市值可能會上升或下降，就您所期望平均年投資報酬率是多少？
+          （以投資100萬元為例）</font></h1>
+      <h3 style = "text-align : left;" >
+          <input type="radio" style="width:20px;height:20px;text-algin:center;" name="e[]" value="1" ><font size="4"> 1%~2%
+              （每年希望獲利1~2萬元）</font><br>
+          <input type="radio" style="width:20px;height:20px;text-algin:left;" name="e[]" value="2" ><font size="4"  align = "left"> 3%~5%
+              （每年希望獲利3~5萬元）</font><br>
+          <input type="radio" style="width:20px;height:20px;text-algin:left;" name="e[]" value="3" ><font size="4"  align = "left"> 6%~8%
+              （每年希望獲利6~8萬元）</font><br>
+          <input type="radio" style="width:20px;height:20px;text-algin:left;" name="e[]" value="4" ><font size="4"  align = "left"> 9%~12%
+              （每年希望獲利9~12萬元）</font><br>
+          <input type="radio" style="width:20px;height:20px;text-algin:left;" name="e[]" value="5" ><font size="4"  align = "left"> 12%以上
+              （每年希望獲利12萬元以上）</font><br>
+                      
+                      </h3>
+      
+      <input type="button" name="previous" class="previous action-button" value="前一步" />
+      <input type="button" name="next" class="next action-button" value="下一步" />
+      
+  </fieldset>
+  
+  <fieldset>
+      <h2 class="fs-title">風險評估問卷 P.6</h2>
+      <h1 class="fs-subtitle"><font color="red" size="5">可承受投資風險之程度
+          資產的市值可能會上升或下降，就您所能承受每年最大投資損失是多少？（以投資100萬元為例</font></h1>
+      <h3 style = "text-align : left;" >
+          <input type="radio" style="width:20px;height:20px;text-algin:center;" name="f[]" value="1" ><font size="4"> 1%~2%
+              （每年可接受損失1~2萬元）</font><br>
+          <input type="radio" style="width:20px;height:20px;text-algin:left;" name="f[]" value="2" ><font size="4"  align = "left"> 3%~5%
+              （每年可接受損失3~5萬元）</font><br>
+          <input type="radio" style="width:20px;height:20px;text-algin:left;" name="f[]" value="3" ><font size="4"  align = "left">  6%~8%
+              （每年可接受損失6~8萬元）</font><br>
+          <input type="radio" style="width:20px;height:20px;text-algin:left;" name="f[]" value="4" ><font size="4"  align = "left"> 9%~12%
+              （每年可接受損失9~12萬元）</font><br>
+          <input type="radio" style="width:20px;height:20px;text-algin:left;" name="f[]" value="5" ><font size="4"  align = "left"> 12%以上
+              （每年可接受損失12萬元以上）</font><br>
+                          
+                          </h3>
+      
+      <input type="button" name="previous" class="previous action-button" value="前一步" />
+      <input type="button" name="next" class="next action-button" value="下一步" />
+      
+  </fieldset>
+  
+  <fieldset>
+      <h2 class="fs-title">風險評估問卷 P.7</h2>
+      <h1 class="fs-subtitle"><font color="red" size="5">投資目的？</font></h1>
+      <h3 style = "text-align : left;" >
+          <input type="radio" style="width:20px;height:20px;text-algin:center;" name="g[]" value="1" ><font size="4"> 只願投資較保守的產品</font><br>
+          <input type="radio" style="width:20px;height:20px;text-algin:left;" name="g[]" value="2" ><font size="4"  align = "left"> 短期投資計畫
+</font><br>
+          <input type="radio" style="width:20px;height:20px;text-algin:left;" name="g[]" value="3" ><font size="4"  align = "left"> 儲蓄退休金</font><br>
+              <input type="radio" style="width:20px;height:20px;text-algin:left;" name="g[]" value="4" ><font size="4"  align = "left"> 儲蓄子女教育基金</font><br>
+               <input type="radio" style="width:20px;height:20px;text-algin:left;" name="g[]" value="5" ><font size="4"  align = "left"> 追求資產增值</font><br>
+
+          
+                          
+                          </h3>
+      <input type="button" name="previous" class="previous action-button" value="前一步" />
+      <input type="button" name="next" class="next action-button" value="下一步" />
+      
+      
+  </fieldset>
+  
+  <fieldset>
+      <h2 class="fs-title">創立新帳號</h2>
+      <h1 class="fs-subtitle">請輸入相關資訊</h1>
+      <input type="text" name="name" placeholder="姓名"  id="username">
+          <input type="text" name="phone" placeholder="手機號碼" />
+          <input type="text" name="email" placeholder="電子信箱" />
+          <input type="text" name="username" placeholder="使用者帳號"  id="name">
+              <input type="password" name="password" placeholder="密碼" id="password" />
+              <input type="password" name="con_password" placeholder="再輸入一次密碼" id="con_password" />
+              <input type="button" name="previous" class="previous action-button" value="前一步" />
+              <input type="submit" name="submit" class="submit action-button" style="background-color:red;" value="確認送出" onclick="Insert();"/>
+              </fieldset>
+  
+  
+<!--    <fieldset>-->
+<!--    <h2 class="fs-title">個人詳細資訊</h2>-->
+<!--    <h3 class="fs-subtitle">根據我們的會員政策，您的資料絕對安全</h3>-->
+<!--    <input type="text" name="fname" placeholder="名字" />-->
+<!--    <input type="text" name="lname" placeholder="姓氏" />-->
+<!--    <input type="text" name="phone" placeholder="手機號碼" />-->
+<!--    <textarea name="address" placeholder="住家地址"></textarea>-->
+<!--    <input type="button" name="previous" class="previous action-button" value="前一步" />-->
+<!--    <input type="submit" name="submit" class="submit action-button" style="background-color:red;" value="確認送出" onclick="Insert();"/>-->
+<!--  </fieldset>-->
+</form>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+<script>
+
+	var Insert=function(){
+    
+    
+    
+    
+	var URLs="register_insert.php";
+	$.ajax({
+     url:URLs,
+     data: $("#msform").serialize(),
+     type:"POST",
+     dataType:'text',
+    success: function(msg){
+    alert(msg)
+    switch(msg) {                    
+    case "註冊成功":
+          window.location = 'http://ligandpath.mis.ncyu.edu.tw:8888/p/prophitfolio/login.html';
+
+     break;
+     
+                }
+                }
+            });
+					}
+					
+					</script>
+    <script src="js/index.js"></script>
+
+</body>
+</html>

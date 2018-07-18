@@ -1,0 +1,77 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #3b3b3b;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  background: #2b2b2b;
+}
+
+.table_btn {
+  background-color: #7b5ec3c4!important;
+  border: none!important;
+  color: black!important;
+  padding: 07px 10px!important;
+  text-align: center!important;
+  text-decoration: none!important;
+  display: inline-block!important;
+  font-size: 14px!important;
+  margin: 4px 2px!important;
+  cursor: pointer!important;
+}
+
+.table_wrapper {
+  margin: 0 auto;
+  padding: 40px;
+  max-width: 800px;
+}
+
+.table_table {
+  margin: 0 0 40px 0 ;
+  width: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  display: table;
+}
+@media screen and (max-width: 580px) {
+  .table {
+    display: block;
+  }
+}
+
+.table_row {
+  display: table-row;
+  background: #f6f6f6;
+}
+.table_row:nth-of-type(odd) {
+  background: #e9e9e9;
+}
+.table_row.header {
+  font-weight: 900;
+  color: #ffffff;
+  background: #ea6153;
+}
+.table_row.green {
+  background: #27ae60;
+}
+.table_row.blue {
+  background: #2980b9;
+}
+@media screen and (max-width: 580px) {
+  .table_row {
+    padding: 8px 0;
+    display: block;
+  }
+}
+
+.table_cell {
+  padding: 6px 12px;
+  display: table-cell;
+}
+@media screen and (max-width: 580px) {
+  .table_cell {
+    padding: 2px 12px;
+    display: block;
+  }
+}

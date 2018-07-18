@@ -1,0 +1,97 @@
+# coding=utf-8
+import requests
+import pandas
+import json
+import csv
+import sys
+reload(sys)
+sys.setdefaultencoding('big5')
+date = []
+fields = []
+output = open("terry2.csv", "w")
+outputwriter = csv.writer(output)
+notjson = []
+n = []
+
+
+
+#判斷是否為json格式
+def is_json(myjson):
+    try:
+        json_object = json.loads(myjson)
+    except ValueError, e:
+        return False
+    return True
+
+
+
+#抓取某檔股票之所有股價相關資訊
+for i in range(1999, 2018, 1):
+    for j in range(1, 13, 1):
+        if j < 10:
+            res = requests.get(
+                "http://www.twse.com.tw/exchangeReport/STOCK_DAY?response=json&date=" + str(i) + "0" + str(
+                    j) + "27&stockNo=3008&_=1498743053902")
+        else:
+            res = requests.get("http://www.twse.com.tw/exchangeReport/STOCK_DAY?response=json&date=" + str(i) + str(
+                j) + "27&stockNo=3008&_=1498743053902")
+        js = res.text
+        if is_json(js):
+
+            js = json.loads(js)
+
+            if 'fields' in js:
+
+                print "OKOK" + " " + str(i) + "/" + str(j),
+                fields = []
+                for k in js['fields']:
+                    fields.append(k)
+                date.append(fields)
+                for l in js['data']:
+                    date.append(l)
+
+            else:
+                print "n" + str(i) + "/" + str(j),
+                print js
+
+        else: #因為爬蟲爬太快造成服務暫時暫停  <center><h1>503 Service Temporarily Unavailable</h1></center>
+            print "notjson" + str(i) + "/" + str(j),
+            print js
+
+
+            while 'Service Temporarily' in res.text: #當有此字串出現，代表服務暫時暫停
+                print "Unavailable"
+
+                #再做一次
+                if j < 10:
+                    res = requests.get(
+                        "http://www.twse.com.tw/exchangeReport/STOCK_DAY?response=json&date=" + str(i) + "0" + str(
+                            j) + "27&stockNo=3008&_=1498743053902")
+                else:
+                    res = requests.get(
+                        "http://www.twse.com.tw/exchangeReport/STOCK_DAY?response=json&date=" + str(i) + str(
+                            j) + "27&stockNo=3008&_=1498743053902")
+                js = res.text
+                if is_json(js):
+                    js = json.loads(js)
+
+                    if 'fields' in js:
+
+                        print "OKOK" + " " + str(i) + "/" + str(j),
+                        fields = []
+                        for k in js['fields']:
+                            fields.append(k)
+                        date.append(fields)
+                        for l in js['data']:
+                            date.append(l)
+
+date = zip(date) #某種資料轉換函數
+
+
+#輸出成CSV檔案
+for i in range(0, len(date), 1):
+    outputwriter.writerow(date[i][0])
+
+output.close()
+
+print "END"
